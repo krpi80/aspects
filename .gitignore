@@ -1,0 +1,4 @@
+.gradle
+*.sublime-*
+*.zip
+build
