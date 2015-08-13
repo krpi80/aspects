@@ -32,6 +32,7 @@ dependencies {
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.12'
     runtime 'org.slf4j:slf4j-simple:1.7.12'
+    compile 'com.codahale.metrics:metrics-core:3.0.1'
 
     weaver 'org.aspectj:aspectjweaver:1.8.6'
 
