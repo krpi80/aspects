@@ -42,9 +42,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-applicationDefaultJvmArgs = [
-        "-javaagent:$configurations.weaver.asPath"
-    ]
+//applicationDefaultJvmArgs = [
+//        "-javaagent:$configurations.weaver.asPath"
+//    ]
 
 /*startScripts {
     doLast {
@@ -53,8 +53,12 @@ applicationDefaultJvmArgs = [
     }
 }*/
 
-run {
+test {
+    jvmArgs "-javaagent:$configurations.weaver.asPath"
+}
 
+run {
+    jvmArgs "-javaagent:$configurations.weaver.asPath"
 }
 
 // another run config:
