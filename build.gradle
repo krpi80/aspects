@@ -45,6 +45,10 @@ dependencies {
     compile 'net.minidev:json-smart:2.0'
     testCompile 'net.javacrumbs.json-unit:json-unit-fluent:1.5.2'
     testRuntime 'com.google.code.gson:gson:2.3.1'
+    testCompile( 'com.athaydes:spock-reports:1.2.7' ) {
+        transitive = false // this avoids affecting your version of Groovy/Spock
+    }
+
 }
 
 //applicationDefaultJvmArgs = [
