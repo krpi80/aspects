@@ -11,7 +11,10 @@ class RefsResolverTest extends Specification {
     expect:
     pp(json) == pp(RefsResolver.resolve(json))
     where:
-    json << ['{"name":"John Doe"}', '{"person1" : {"name":"John Doe"}, "person2" : {"name":"John Doe"}}', '["abc"]']
+    _| json
+    _| '{"name":"John Doe"}'
+    _| '{"person1" : {"name":"John Doe"}, "person2" : {"name":"John Doe"}}'
+    _| '["abc"]'
   }
 
   def "Should resolve ref"() {
